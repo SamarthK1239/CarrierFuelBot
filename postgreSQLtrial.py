@@ -4,6 +4,7 @@ import discord
 from discord.ext.commands import Bot
 import time
 import psycopg2
+import ssl
 
 
 mydb = psycopg2.connect(
@@ -113,4 +114,4 @@ async def on_message(message):
                 time.sleep(1)   
         
         
-bot.run('NzkzMDk4NjI5NDEzMjA4MDc1.X-nUqA.oaj5JfEt4m9eQYFJDl3aoRgoffw')
+bot.run('token here')

@@ -6,10 +6,10 @@ import time
 
 
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="Coolboi135",
-  database="carriers_log"
+  host="sql4.freemysqlhosting.net",
+  user="sql4397217",
+  password="TMnhvuBW2v",
+  database="sql4397217"
 )
 
 cursor = mydb.cursor()

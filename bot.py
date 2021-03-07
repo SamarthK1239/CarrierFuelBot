@@ -135,4 +135,4 @@ async def on_message(message):
     
         
         
-bot.run('NzkzMDk4NjI5NDEzMjA4MDc1.X-nUqA.MaMduCGcUmVDOZi40D8VAUK_gHk')
+bot.run('token here')

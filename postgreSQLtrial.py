@@ -10,7 +10,8 @@ mydb = psycopg2.connect(
   host="ec2-54-198-252-9.compute-1.amazonaws.com",
   user="rxtlaaeqyzekth",
   password="3d1e4174c503787eac062aa0cf68cefd6243223978afc13358d49a2097207d09",
-  database="de08k73mbch87g"
+  database="de08k73mbch87g",
+  sslmode=disable
 )
 
 cursor = mydb.cursor()

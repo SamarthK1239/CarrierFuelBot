@@ -39,7 +39,11 @@ class Carrier(commands.Cog):
     async def addCarrier(self, ctx: commands.Context):
         input_fuel = await self.get_fuel_from_user(ctx)
         fauna_client = FaunaClient(FAUNA_CLIENT_SECRET)
-        created_fuel = FuelDocument(**fauna_client.query(Fuel.create(input_fuel))[0])
+        created_fuel = FuelDocument(
+            **fauna_client.query(
+                Fuel.create(input_fuel)
+            )
+        )
         created_message = f'''Added carrier {created_fuel.data.name} which is at {created_fuel.data.fuel_level}% 
         has {created_fuel.data.reserves}T in storage and a standing buy order of {created_fuel.data.buy_order}
         '''
@@ -49,7 +53,7 @@ class Carrier(commands.Cog):
 
     @commands.command()
     async def updateCarrier(self, ctx: commands.Context):
-        pass
+        print('updateCarrier command')
 
 
 def setup(bot: commands.Bot):

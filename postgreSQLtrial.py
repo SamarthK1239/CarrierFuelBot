@@ -1,5 +1,4 @@
 import os
-import mysql.connector
 import discord
 from discord.ext.commands import Bot
 import time

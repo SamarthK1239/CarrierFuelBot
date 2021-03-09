@@ -1,0 +1,3 @@
+import os
+
+FAUNA_CLIENT_SECRET = os.getenv('FAUNA_CLIENT_SECRET')

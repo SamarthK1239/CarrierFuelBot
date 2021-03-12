@@ -1,1 +1,1 @@
-worker: python postgreSQLtrial.py
+worker: python bot.py

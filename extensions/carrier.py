@@ -43,7 +43,10 @@ class Carrier(commands.Cog):
         fauna_client = FaunaClient(FAUNA_CLIENT_SECRET)
         created_fuel = FuelDocument(
             **fauna_client.query(
-                Fuel.create(input_fuel.dict())
+                q.create(
+                    q.collection('fuels'),
+                    { 'data': input_fuel.dict() }
+                )
             )
         )
         created_message = f'''Added carrier {created_fuel.data.name} which is at {created_fuel.data.fuel_level}% 
